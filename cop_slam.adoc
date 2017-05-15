@@ -34,6 +34,42 @@ Her bir veri seti için 100 simüle edilmiş yörüngeden birinde elde edilen ik
 
 image::images/5.jpg[]
 
+Sonuçlar, her iki yöntem için üç boyutlu ve her üç Pittsburgh veri setinde çizilmiştir. Pittsburgh-A (a), Pittsburgh-B (b) ve Pittsburgh-C (c) 'de gösterilmiştir. Soldan sağa: GPS doğruluk, görsel odometri, COP-SLAM, G2O. Fayans boyutu 200 metredir.
+
+image::images/6.jpg[]
+
+COP-SLAM'ın sonuçları, üç Pittsburgh veri seti için havadan ve topografik görüntülerin üstüne çizildi. Pittsburgh-A (a), Pittsburgh-B (b) ve Pittsburgh-C (c) 'de gösterilmiştir. GPS esaslı toprak gerçeği yörüngeleri, COP-SLAM tarafından yeşil olarak tahmin edilen kırmızı ve yörüngeler halinde çizilmiştir.
+
+image::images/7.jpg[]
+
+=PSEUDO KOD
+
+**while running *do*
+Get edge from SLAM front-end
+if edge is a loop-closing edge then
+Restrict computations to the Lie group of rotations.
+R.1) Get 2
+Dn
+and compute 2
+An
+with Eq. 9.
+R.2) Use Eq. 10, 3, 4 and 7 to compute the distributed updates.
+R.3) Multiply  of each edge with the  of Eq. 13.
+Recompute all absolute poses given the distributed updates.
+Restrict computations to the Lie group of translations.
+T.1) Get 2
+Dn
+and compute 2
+An
+with Eq. 9.
+T.2) Use Eq. 10, 3, 4 and 7 to compute the distributed updates.
+T.3) Multiply  of each edge with the  of Eq. 13.
+Recompute all absolute poses given the distributed updates.
+else
+Add successive edge to end of pose-chain and compute new last
+absolute pose
+end if
+end while
 
 = KURULUM ve ÇALIŞTIRMA
 
