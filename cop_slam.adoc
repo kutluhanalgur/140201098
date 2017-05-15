@@ -8,6 +8,7 @@ Sık döngü algılamanın istenmediği veya mümkün olmadığı büyük ölçe
 
 image::images/0.jpeg[]
 
+= Özet
 
 Poz-grafik SLAM için kapalı formlu yeni bir çözüm sunulmuştur. Yörünge bükülmesinin genişletilmiş bir versiyonunu kullanarak poz zincirleri adı verilen özel yapının poz grafiklerini optimize eder. Çözümümüz, ön uçları en yeni görsel odometri ve görünüm tabanlı döngü algılama özelliğini kullanan sistemlerde kullanılmak üzere bir arka uç iyileştirici olarak tasarlanmıştır. Kapalı form yöntemimizin ve son teknoloji yineleyici yöntemlerin optimallik koşulları tartışıldı. Teorik farklılıklarının pratik önemi simüle edilmiş ve gerçek veriler kullanılarak yapılan kapsamlı deneylerle araştırılmıştır. 49 kilometrelik zorlayıcı binoküler verilerle gösterildi ki, kapalı form çözümümüz tarafından elde edilen doğruluk en son teknoloji yinelemeli çözümlerle karşılaştırılabilirken, çözümünü hesaplamak için gereken süre 50 ila 200 kez faktördür daha düşüktür. Bu, yaklaşımımızı geniş bir uygulama yelpazesi ve hesaplama platformlarıyla ilişkilendirmektedir.
 
@@ -48,9 +49,7 @@ $ octave
 
 **2)**Veya g2o paketinin g2o_viewer sürümünü kullanın. Daha fazla bilgi için openslam.org'daki g2o projesine bakın.
 
-= Özet
 
-Poz-grafik SLAM için kapalı formlu yeni bir çözüm sunulmuştur. Yörünge bükülmesinin genişletilmiş bir versiyonunu kullanarak poz zincirleri adı verilen özel yapının poz grafiklerini optimize eder. Çözümümüz, ön uçları son teknolojiye sahip görsel odometri ve görünüm tabanlı döngü algılama özelliğini kullanan sistemlerde kullanılmak üzere bir arka uç iyileştirici olarak tasarlanmıştır. Kapalı form yöntemimizin ve son teknoloji yineleyici yöntemlerin optimallik koşulları tartışılmıştır. Teorik farklılıklarının pratik önemi simüle edilmiş ve gerçek veriler kullanılarak yapılan kapsamlı deneylerle araştırılmıştır. 49 kilometrelik zorlayıcı binoküler verilerle gösterilmiştir; bu, kapalı form çözümümüz tarafından elde edilen doğruluk, en son teknoloji yinelemeli çözümlerle karşılaştırılabilir, ancak çözümünü hesaplamak için gereken süre 50 ila 200 kat arasında değişmektedir. Bu, yaklaşımımızı geniş bir uygulama yelpazesi ve hesaplama platformlarıyla ilişkilendirmektedir.
 
 = Algoritmaların (Matematiğin) Kod Karşılıkları
 
