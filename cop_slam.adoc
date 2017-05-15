@@ -42,42 +42,30 @@ COP-SLAM'ın sonuçları, üç Pittsburgh veri seti için havadan ve topografik 
 
 image::images/7.jpg[]
 
-=PSEUDO KOD
+= PSEUDO KOD
 
-*[underline]#while#* running *[underline]#do#*
-
+[source,]
+----
+while running do
 	Get edge from SLAM front-end
-	
-	*[underline]#if#* edge is a loop-closing edge then
-	
+	if edge is a loop-closing edge then
 		Restrict computations to the Lie group of rotations.
-		
-		*R.1)* Get a^2.Dn and compute a^2.An with Eq. 9.
-		
-		*R.2)* Use Eq. 10, 3, 4 and 7 to compute the distributed updates.
-		
-		*R.3)* Multiply a of each edge with the B of Eq. 13.
-		
+		R.1) Get a^2.Dn and compute a^2.An with Eq. 9.
+		R.2) Use Eq. 10, 3, 4 and 7 to compute the distributed updates.
+		R.3) Multiply a of each edge with the B of Eq. 13.
 		Recompute all absolute poses given the distributed updates.
-		
 		Restrict computations to the Lie group of translations.
-		
-		*T.1)* Get a^2.Dn and compute a'2.An with Eq. 9.
-		
-		*T.2)* Use Eq. 10, 3, 4 and 7 to compute the distributed updates.
-		
-		*T.3)* Multiply a of each edge with the B of Eq. 13.
-		
+		T.1) Get a^2.Dn and compute a'2.An with Eq. 9.
+		T.2) Use Eq. 10, 3, 4 and 7 to compute the distributed updates.
+		T.3) Multiply a of each edge with the B of Eq. 13.
 		Recompute all absolute poses given the distributed updates.
-		
-	*else*
-	
+	else
 		Add successive edge to end of pose-chain and compute new last
-		absolute pose
-		
-	*end if*
-	
-*end while*
+		absolute pose		
+	end if
+end while
+
+----
 
 = KURULUM ve ÇALIŞTIRMA
 
