@@ -18,6 +18,22 @@ image::images/1.jpg[]
 
 Yukarıdaki görsel orijinal yörünge eğilme algoritmasının kavramsal gösterimi. (A) 'da yeryüzündeki hakikat yörüngesinin mutlak pozları, yeşil üçgenlerle ve yeryüzündeki gerçeğe göre, yeşil kenarlarla göreceli poz yer değiştirmeleri ile tasvir edilmiştir. Yörüngenin mutlak pozları için tahminler, turuncu üçgenlerle ve siyah kenarlarla göreli poz yer değiştirmeleri için olan tahminlerle gösterilir. Belirli bir zamanda, sistem son mutlak pozu, yani (b) 'deki mavi üçgen hakkında daha doğru bilgi alır. İlk adım, (b) 'deki küçük açık gri üçgenler tarafından gösterilen göreceli poz güncellemelerini bulmak ve bu da son mutlak pozu arzu edilen son pozu, yani mavi üçgenin üzerine getirmektir. Bu güncellemelere yerel güncelleştirme denir. İkinci adım ise, bu yerel güncellemeleri yörüngesine yayan dönüşümleri hesaplamaktır (c). Bu dönüşümlerin sonucu, (d) 'de küçük siyah üçgenlerle gösterilen dağıtılmış güncellemelerdir. (D) 'de dağıtılmış güncellemeler ile birlikte göreli poz deplasmanları kullanılarak gelişmiş bir yörünge hesaplanır. Sonuç, yörüngenin arzulanan mutlak pozlamada sona ermesidir.
 
+Denemelerde kullanılan üç binoküler veri kümesinden örnek resimler.
+
+image::images/2.jpg[]
+
+Aşağıdaki örnekte çeşitli grafik tabanlı SLAM resimlerinin çizimi gösterilmiştir. Genel grafik SLAM (a), poz-grafik SLAM (b), zincir-zincir SLAM (c). İlk mutlak poz, yeşil üçgen ve ardışık mutlak pozlar turuncu üçgenlerle gösterilir. Simgeler, mavi yıldızlarla gösterilir. Düğümler arasındaki kenarlar (yani mutlak pozlar ve yer işaretleri) siyah çizgilerle gösterilir. (A) 'da, (b, c)' de yer işareti gözlemleri, göreli poz deplasmanlarını modelliyor. (C) 'de iki döngü kapanış kenarı ağır siyah çizgilerle işaretlenmiştir.
+
+image::images/3.jpg[]
+
+Yörünge bükümü için dış (a) ve iç (b) kaynaşma mekanizmaları. Son mutlak pozdaki belirsizlik, turuncu daire ve mavi daire tarafından arzulanan pozdaki belirsizlik ile gösterilir. Son mutlak poz ile arzulanan pozun optimal kombinasyonu, (a) daki siyah üçgen ile gösterilir. (B) 'de yerel güncellemeler, son mutlak poz ve arzulanan pozun optimum kombinasyonu ile aynı yere sahip olan büyük gri üçgene biter.
+
+image::images/4.jpg[]
+
+Her bir veri seti için 100 simüle edilmiş yörüngeden birinde elde edilen iki yöntemin sonuçları. (A) 'da çiçek, (b) çiçek, (c)' de 5 döngü bulunan dünya ve (d) 'de 25 döngü bulunan dünya gösterilmektedir. Soldan sağa: gerçek doğruluk, simüle görsel odometri, COP-SLAM, G2O
+
+image::images/5.jpg[]
+
 
 = KURULUM ve ÇALIŞTIRMA
 
