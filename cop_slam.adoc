@@ -69,6 +69,11 @@ end while
 
 = KURULUM ve ÇALIŞTIRMA
 
+COP-SLAM algoritmasını çalıştırabilmek için;
+
+İlk olarak gerekli tüm dosyaları http://openslam.org/copslam.html [^] adresinden http://openslam.org/copslam.html[Cop-SLAM^] Algoritması
+için gerekli dosyaları bilgisayarımıza indiriyoruz.
+
 * <Dir> dizininde COP-SLAM paketini açtığınızı veya teslim aldığını varsayarak,
 
 * Yükleyin ve çalıştırın
