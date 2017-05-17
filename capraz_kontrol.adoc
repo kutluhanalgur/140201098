@@ -65,7 +65,7 @@ image::image/107.jpg[]
 cd ~/treemap/trunk/treemap1Mtest/ && ./treemap1Mtest
 -----------------
 
-image:108.jpg[]
+image::image/108.jpg[]
 
 = ÖRNEK VERİ SETİYLE TEST ETME
 
