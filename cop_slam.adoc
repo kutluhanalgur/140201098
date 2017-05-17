@@ -68,8 +68,9 @@ end while
 ----
 
 = KURULUM ve ÇALIŞTIRMA
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-COP-SLAM algoritmasını çalıştırabilmek için;
+*COP-SLAM* algoritmasını çalıştırabilmek için;
 
 *1* İlk olarak gerekli tüm dosyaları http://openslam.org/copslam.html[^] adresinden http://openslam.org/copslam.html[Cop-SLAM^] Algoritması
 için gerekli dosyaları bilgisayarımıza indiriyoruz.
@@ -89,6 +90,16 @@ image::images/10.jpg[]
 image::images/11.jpg[]
 
 image::images/12.jpg[]
+
+*4* sistemimize *cmake* kurmak için https://cmake.org/download/[^] adresine gidiyoruz ve indiriyoruz.
+
+image::images/15.jpg[]
+
+image::images/16.jpg[]
+
+*5* *Sublime* text editor yardımı ile *copslam/trunk/COP-SLAM_v0.1/src/* içerisindeki *main.cpp* derlenir.
+
+image::images/17.jpg[]
 
 
 * <Dir> dizininde COP-SLAM paketini açtığınızı veya teslim aldığını varsayarak,
