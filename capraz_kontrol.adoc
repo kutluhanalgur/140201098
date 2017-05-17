@@ -1,6 +1,6 @@
 *UYARI!* Bu döküman Treemap algoritması konusunu işleyen 3 Ayrı grubun dökümanı incelendikten sonra hazırlanmıştır.
 
-image:1.jpg[]
+image:101.jpg[]
 
 TreeMap
 ------
@@ -17,23 +17,58 @@ Dolayısıyla, bir kullanıcı olarak, gerçek sayıların bir vektörü olarak 
 
 Treemap bir harita tahmini sağlar. Prensipte, veri ilişkisi için yararlı olacak kovaryans bilgileri sağlayabilir. Ancak, henüz uygulanmadı.
 
-image:4.jpg[]
+image:104.jpg[]
 
-image:5.jpg[]
+image:105.jpg[]
 
 Farklı SLAM Varyasyonları için Genel Bir Açık Kaynak Arka Planı olarak: *Treemap*
 --------------------------------------------------------------------------------
 
 Treemap, 442 ms'de bir milyon yer işareti üzerinde bir döngüyü kapatan son derece büyük 2D haritaları tahmin etmek için başarıyla kullanılan genel bir SLAM algoritmasıdır. Şu anda SLAM'ın en çok değişkenini işleyebilecek bir açık kaynak uygulaması üzerinde çalışıyoruz. Burada, 6-DOF özellik tabanlı SLAM'ı gösteren ilk sonuçları gösteriyoruz.
 
-image:2.jpg[]
+image:102.jpg[]
 
 http://www.informatik.uni-bremen.de/agebv/en/TreemapAsAGenericOpenSourceBackend?action=AttachFile&do=view&target=frese6dofslam.avi[]
 
 Bu linkte eşleme sürecini gösterir. Robot, oda duvarlarında özelliklere sahip, 20 katlı bir bina içerisinden geçiyor. Daha sonra 19. kattaki bir köprüden başka bir 20 katlı binaya geçiyor ve bu binayı da haritalar. Son olarak, başlangıç ​​konumuna döner ve tüm özellikte bir döngü kapanır. Genel haritanın n = 106657 ve m = 5319956 gözlemlerin p = 488289 olduğu görülmektedir. Pozlar haritada gösterilmez. Hesaplama zamanı en fazla 209ms idi.
 
-image:3.jpg[]
+image:103.jpg[]
 
 Anahtar nokta, iki katmanlı bir mimaridir. Treemap arka uç, algoritmanın neredeyse tüm zorluklarını içerir. Düşük boyutlu birçok Gauss ürününün ürünü olarak tanımlanan yüksek boyutlu Gaussian'da çıkarım yapar. Düşük boyutlu Gausslar measuremenets'e karşılık gelir. İkinci katman olan treemap sürücüsü, orijinal ölçümleri bu düşük boyutlu Gaussianlara dönüştürür, temelde ölçüm denklemlerini doğrusallaştırarak onları treemap arka uçına geçirir. Ayrıca bazı uygulamaya bağımlı yaklaşım ilkelerini tanımlar. Ardından, artalan, elde edilen Gauss'un ortalamasını hesaplar ve bu da, treemap sürücüsü tarafından bir harita tahmini haline dönüştürülür. Odometri olmaksızın 2D özellik tabanlı SLAM, 2D / 3DOF poz ilişki tabanlı SLAM ve 3D / 6DOF özellik tabanlı SLAM için sürücüler uyguladık.
 
-image:https://i.imgur.com/AEkqoRn.jpg[]
+PROJENİN DERLENMESİ
+-------------------
+
+Projeyi derlemek için terminale aşağıdaki komutları girelim ve çıktılarının resimde gözüktüğü gibi olmalarına dikkat edelim
+
+
+[source,python]
+-----------------
+cd ~/treemap/trunk/treemap1Mtest/ && cmake 
+-----------------
+
+image:106.jpg[]
+
+
+[source,python]
+-----------------
+make 
+-----------------
+
+image:107.jpg[]
+
+= PROJENİN ÇALIŞTIRILMASI
+
+
+[source,python]
+-----------------
+cd ~/treemap/trunk/treemap1Mtest/ && ./treemap1Mtest
+-----------------
+
+image:108.jpg[]
+
+= ÖRNEK VERİ SETİYLE TEST ETME
+
+image:109.jpg[]
+image:110.jpg[]
+
