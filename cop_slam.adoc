@@ -71,8 +71,25 @@ end while
 
 COP-SLAM algoritmasını çalıştırabilmek için;
 
-İlk olarak gerekli tüm dosyaları http://openslam.org/copslam.html [^] adresinden http://openslam.org/copslam.html[Cop-SLAM^] Algoritması
+*1* İlk olarak gerekli tüm dosyaları http://openslam.org/copslam.html[^] adresinden http://openslam.org/copslam.html[Cop-SLAM^] Algoritması
 için gerekli dosyaları bilgisayarımıza indiriyoruz.
+
+image::images/8.jpg[]
+
+image::images/9.jpg[]
+
+*2* Linux işletim sistemi üzerinde çalışacağız bu işlem için bilgisayarımıza *sanal makine* kurulumu yapıyoruz.
+
+Bu işlem için *Oracle VM VirtualBox* Kullanacağız.
+
+image::images/10.jpg[]
+
+*3* https://www.ubuntu.com/download/desktop[^] adresinden indirdiğimiz *Ubuntu 16.04* sürümünü VirtualBox üzerine kuruyoruz.
+
+image::images/11.jpg[]
+
+image::images/12.jpg[]
+
 
 * <Dir> dizininde COP-SLAM paketini açtığınızı veya teslim aldığını varsayarak,
 
